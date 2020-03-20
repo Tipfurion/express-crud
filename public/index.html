@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Список пользователей</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body >
+ 
+
+  
+
+
+    <div class="row">
+      <form class="col s12 offset-s4">
+        <h4>New user</h4>
+        <div class="row">
+          <div class="input-field col s2">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field col s2">
+            <input id="age" type="text" class="validate">
+            <label for="age">Age</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+    <button class="btn waves-effect waves-light col s4 offset-s4" onclick="createUser()">Create 
+      <i class="material-icons right">person_add</i>
+    </button>   
+    </div>
+  <div class="row">
+
+  <table id="t" class="striped col s4 offset-s4" >
+    <thead>
+      <tr>
+        <th><h4>Name</h4></th>
+        <th><h4>Age</h4></th>
+        <th><h4>ID</h4></th>
+        <th><h4>Actions</h4></th>
+      </tr>
+    </thead>
+
+    <tbody id="tb">
+
+    </tbody>
+  </table>
+</div>
+
+
+<div id="modal1" class="modal modal-fixed-footer">
+ 
+  <div class="modal-content">
+    <h4>Edit user data</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="nameInputModal" placeholder="Placeholder" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">timeline</i>
+            <input id="ageInputModal" placeholder="Placeholder" type="text" class="validate">
+            <label for="age">Age</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">people</i>
+            <input id="idInputModal" placeholder="Placeholder"  disabled value="I am not editable" type="text" class="validate">
+            <label for="id">Id</label>
+          </div>
+        </div>
+
+          </div>
+        </div>
+      </form>
+    
+  
+
+  <div class="modal-footer ">
+    <div class="left">
+    <button onclick="modal.close()" class=" btn waves-effect waves-light ">close<i class="material-icons prefix">pecheck</i></button>
+  </div>
+  </div>
+</div>
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
