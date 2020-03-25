@@ -1,4 +1,4 @@
-const url = 'https://reqres.in/api/users/2'
+
 let btn1 = document.querySelector("#btn1");
 let table = document.querySelector("#tb");
 let nameInput = document.querySelector("#name");
